@@ -27,6 +27,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>8.3.0</version>
+		</dependency>
 		<!-- Include a newer version of json-path to avoid CVE-2023-51074 vulnerability -->
 		<dependency>
 			<groupId>com.jayway.jsonpath</groupId>
