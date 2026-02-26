@@ -4,6 +4,7 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+// this is the multi-threaded server
 public class MultiThreadedServer {
 
   public static void main(String[] args) {
@@ -42,6 +43,7 @@ public class MultiThreadedServer {
         double b = Double.parseDouble(parts[2]);
 
         double result = calculate(a, b, op);
+        // now we add Thread.sleep and see the difference
         Thread.sleep(2000);
         out.println(result);
 

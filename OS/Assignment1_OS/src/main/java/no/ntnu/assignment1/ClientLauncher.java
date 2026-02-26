@@ -13,7 +13,7 @@ public class ClientLauncher {
     Thread[] clients = new Thread[n];
 
     long start = System.currentTimeMillis();
-
+    // we run calculations 10 times
     for (int i = 0; i < n; i++) {
       final int id = i;
 

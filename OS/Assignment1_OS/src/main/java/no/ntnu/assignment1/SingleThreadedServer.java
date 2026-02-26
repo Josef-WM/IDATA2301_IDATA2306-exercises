@@ -4,6 +4,7 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+// this is the single-threaded server.
 public class SingleThreadedServer {
 
   public static void main(String[] args) {
