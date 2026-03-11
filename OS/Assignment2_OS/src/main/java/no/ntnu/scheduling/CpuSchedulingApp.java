@@ -4,10 +4,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Starting point of the Java application.
+ */
 public class CpuSchedulingApp {
 
+  // main-method
   static void main() {
 
+    // Setting up case1
     List<Process> case1 = Arrays.asList(
             new Process("P1", 0, 8, 0),
             new Process("P2", 0, 4, 1),
@@ -16,6 +21,7 @@ public class CpuSchedulingApp {
             new Process("P5", 0, 3, 4)
     );
 
+    // Setting up case2
     List<Process> case2 = Arrays.asList(
             new Process("P1", 0, 20, 0),
             new Process("P2", 1, 2, 1),
@@ -24,6 +30,7 @@ public class CpuSchedulingApp {
             new Process("P5", 4, 3, 4)
     );
 
+    // Setting up case3
     List<Process> case3 = Arrays.asList(
             new Process("P1", 0, 20, 0),
             new Process("P2", 1, 2, 1),
@@ -33,11 +40,19 @@ public class CpuSchedulingApp {
             new Process("P6", 5, 2, 5)
     );
 
+    // Running all the cases
     runCase("Case1", "CASE 1 (all AT=0)", case1);
     runCase("Case2", "CASE 2 (long job then short arrivals)", case2);
     runCase("Case3", "CASE 3 (starvation risk)", case3);
   }
 
+  /**
+   * Method for running a 'case'.
+   *
+   * @param label label
+   * @param title title
+   * @param base base
+   */
   private static void runCase(String label, String title, List<Process> base) {
     System.out.println("\n==================================================");
     System.out.println(title);
@@ -62,6 +77,12 @@ public class CpuSchedulingApp {
     ResultsPrinter.printComparisonTable(label, r1, r2, r3);
   }
 
+  /**
+   * Method for copying the List of Process and returning it as an Arraylist.
+   *
+   * @param base base
+   * @return an ArrayList of copied processes of the Process list
+   */
   private static List<Process> copy(List<Process> base) {
     List<Process> out = new ArrayList<>();
     for (Process p : base) out.add(p.copy());

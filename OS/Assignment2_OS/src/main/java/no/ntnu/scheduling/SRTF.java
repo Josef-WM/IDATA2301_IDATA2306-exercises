@@ -2,13 +2,24 @@ package no.ntnu.scheduling;
 
 import java.util.List;
 
+/**
+ * Class implementing the (S)hortest (R)emaining (T)time (F)irst 'algorithm'.
+ */
 public class SRTF implements Scheduler {
 
+  /**
+   * Method for returning the name.
+   *
+   * @return the name.
+   */
   @Override
   public String name() {
     return "SRTF (preemptive)";
   }
 
+  /**
+   * Method scheduling and returning process.
+   */
   @Override
   public List<Process> schedule(List<Process> ps) {
     int n = ps.size();

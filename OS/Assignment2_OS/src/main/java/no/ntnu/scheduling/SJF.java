@@ -2,13 +2,24 @@ package no.ntnu.scheduling;
 
 import java.util.List;
 
+/**
+ * Class implementing the (S)hortest (J)ob (F)irst 'algorithm'.
+ */
 public class SJF implements Scheduler {
 
+  /**
+   * Method for returning the name.
+   *
+   * @return the name.
+   */
   @Override
   public String name() {
     return "SJF (non-preemptive)";
   }
 
+  /**
+   * Method scheduling and returning process.
+   */
   @Override
   public List<Process> schedule(List<Process> ps) {
     int n = ps.size();
