@@ -1,5 +1,5 @@
 ## Assignment 2
-# By Kevin & Josef, for an Assignment in IDATA2305
+#### By Kevin & Josef, for an Assignment in IDATA2305
 
 
 ## Running the program:
