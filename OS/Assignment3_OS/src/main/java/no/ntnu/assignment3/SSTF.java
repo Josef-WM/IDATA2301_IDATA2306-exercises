@@ -2,13 +2,29 @@ package no.ntnu.assignment3;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class implementing the (S)hortest (S)eek (T)ime (F)irst algorithm.
+ */
 public class SSTF implements DiskScheduler {
 
+  /**
+   * Method for returning the name.
+   *
+   * @return the name
+   */
   @Override
   public String getName() {
     return "SSTF";
   }
 
+  /**
+   * Method scheduling and returning a DiskResult-object.
+   *
+   * @param initialHead the initial head
+   * @param direction the direction
+   * @param requests requests
+   * @return a DiskResult-object
+   */
   @Override
   public DiskResult schedule(int initialHead, String direction, List<Integer> requests) {
     List<Integer> remaining = new ArrayList<>(requests);

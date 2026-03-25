@@ -3,16 +3,32 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Class implementing the SCAN algorithm (elevator algorithm, goes up and down)
+ */
 public class SCAN implements DiskScheduler {
 
   private static final int DISK_MIN = 0;
   private static final int DISK_MAX = 199;
 
+  /**
+   * Method for returning the name.
+   *
+   * @return the name
+   */
   @Override
   public String getName() {
     return "SCAN";
   }
 
+  /**
+   * Method scheduling and returning the DiskResult.
+   *
+   * @param initialHead the initial head
+   * @param direction the direction
+   * @param requests requests
+   * @return a DiskResult-object
+   */
   @Override
   public DiskResult schedule(int initialHead, String direction, List<Integer> requests) {
     List<Integer> left = new ArrayList<>();

@@ -2,34 +2,49 @@ package no.ntnu.assignment3;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Starting point of the Java application.
+ */
 public class DiskSchedulingApp {
 
+  // main method
   public static void main(String[] args) {
     DiskScheduler fcfs = new FCFS();
     DiskScheduler sstf = new SSTF();
     DiskScheduler scan = new SCAN();
 
-    // Case 1
+    // Setting up case 1
     int head1 = 53;
     String direction1 = "right";
     List<Integer> requests1 = Arrays.asList(98, 183, 37, 122, 14, 124, 65, 67);
 
-    // Case 2
+    // Setting up case 2
     int head2 = 50;
     String direction2 = "right";
     List<Integer> requests2 = Arrays.asList(45, 48, 52, 90, 150, 160);
 
-    // Case 3
+    // Setting up case 3
     int head3 = 15;
     String direction3 = "right";
     List<Integer> requests3 = Arrays.asList(10, 12, 14, 16, 100, 102);
 
-    // Run all cases
+    // Running all the cases
     runCase("Case1", head1, direction1, requests1, fcfs, sstf, scan);
     runCase("Case2", head2, direction2, requests2, fcfs, sstf, scan);
     runCase("Case3", head3, direction3, requests3, fcfs, sstf, scan);
   }
 
+  /**
+   * Method for running a 'case'.
+   *
+   * @param caseLabel label
+   * @param initialHead initial head
+   * @param direction the direction
+   * @param requests request
+   * @param fcfs 'first come first served'
+   * @param sstf 'shortest seek time first'
+   * @param scan scan
+   */
   private static void runCase(String caseLabel,
                               int initialHead,
                               String direction,

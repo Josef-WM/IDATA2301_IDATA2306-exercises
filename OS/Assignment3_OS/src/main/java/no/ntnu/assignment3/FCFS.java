@@ -2,13 +2,29 @@ package no.ntnu.assignment3;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class implementing the (F)irst (C)ome (F)irst (S)erved 'algorithm.
+ */
 public class FCFS implements DiskScheduler {
 
+  /**
+   * Method for returning the name
+   *
+   * @return the name.
+   */
   @Override
   public String getName() {
     return "FCFS";
   }
 
+  /**
+   * Method scheduling and returning process
+   *
+   * @param initialHead the initial head
+   * @param direction the direction
+   * @param requests the requests
+   * @return DiskResult object
+   */
   @Override
   public DiskResult schedule(int initialHead, String direction, List<Integer> requests) {
     List<Integer> serviceOrder = new ArrayList<>();
