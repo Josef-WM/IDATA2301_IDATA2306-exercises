@@ -13,6 +13,14 @@ public class DiskSchedulingApp {
     DiskScheduler sstf = new SSTF();
     DiskScheduler scan = new SCAN();
 
+    // Setting up the various cases. We did not implement
+    // input from the user, as we were to implement already
+    // specified test cases.
+
+    // If we would like to have user input, we would import
+    // the scanner class, and also error handle in case of
+    // invalid/wrong input.
+
     // Setting up case 1
     int head1 = 53;
     String direction1 = "right";
